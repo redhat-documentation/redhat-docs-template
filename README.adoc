@@ -1,4 +1,4 @@
-= About
+== About
 
 A simple containerized Asciidoctor build that you can use build a simple Asciidoctor HTML website. The site design is modern and responsive.
 
