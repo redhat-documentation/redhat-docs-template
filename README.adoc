@@ -11,7 +11,7 @@ image::site.png[width=800px]
 
 == Running the build locally
 
-1. Open a command prompt at a folder containing your AsciiDoc assembly file.
+1. Open a command prompt at the folder containing your AsciiDoc assembly file.
 2. Load the assets to the local context:
 +
 ```cmd
