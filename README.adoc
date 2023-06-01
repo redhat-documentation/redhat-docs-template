@@ -1,0 +1,22 @@
+= About
+
+A simple containerized Asciidoctor build that you can run to build a simple Asciidoctor html site. The site design is modern and responsive.
+
+== Prerequisites
+
+* Install podman
+
+== Running the build locally
+
+1. Open a command prompt at a folder containing an AsciiDoc assembly file.
+2. Load the assets to the local context:
++
+```cmd
+$ podman cp $(podman run --quiet --detach quay.io/rhn_support_aireilly/asciidoctor-basic-style):/assets ./assets
+```
+3. Run the build:
++
+```cmd
+podman run --rm -it -v "$(pwd)":/docs:Z quay.io/rhn_support_aireilly/asciidoctor-basic-style main.adoc
+```
+
