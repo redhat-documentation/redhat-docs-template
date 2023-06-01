@@ -7,9 +7,9 @@ WORKDIR /docs
 RUN mkdir /assets
 COPY assets /assets
 
-COPY build.sh /docs/build.sh
-RUN chmod +x /docs/build.sh
+COPY build.sh /build.sh
+RUN chmod +x /build.sh
 
 RUN gem install asciidoctor asciidoctor-diagram rouge
 
-ENTRYPOINT ["/bin/bash", "/docs/build.sh"]
+ENTRYPOINT ["/bin/bash", "/build.sh"]
