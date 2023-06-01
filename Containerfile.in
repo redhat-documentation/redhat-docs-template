@@ -1,0 +1,15 @@
+FROM registry.access.redhat.com/ubi8/ruby-27:latest
+
+USER root
+
+WORKDIR /docs
+
+RUN mkdir /assets
+COPY assets /assets
+
+COPY build.sh /docs
+RUN chmod +x /docs/build.sh
+
+RUN gem install asciidoctor asciidoctor-diagram rouge
+
+ENTRYPOINT ["/bin/bash", "/docs/build.sh"]
