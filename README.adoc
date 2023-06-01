@@ -1,6 +1,6 @@
 = About
 
-A simple containerized Asciidoctor build that you can run to build a simple Asciidoctor html site. The site design is modern and responsive.
+A simple containerized Asciidoctor build that you can use build a simple Asciidoctor HTML website. The site design is modern and responsive.
 
 == Prerequisites
 
