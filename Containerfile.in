@@ -7,7 +7,7 @@ WORKDIR /docs
 RUN mkdir /assets
 COPY assets /assets
 
-COPY build.sh /docs
+COPY build.sh /docs/build.sh
 RUN chmod +x /docs/build.sh
 
 RUN gem install asciidoctor asciidoctor-diagram rouge
