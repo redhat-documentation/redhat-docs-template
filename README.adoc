@@ -7,19 +7,23 @@ image::site.png[width=800px]
 
 == Prerequisites
 
-* Install podman
+* Install Podman
 
 == Running the build locally
 
-1. Open a command prompt at the folder containing your AsciiDoc assembly file.
-2. Load the assets to the local context:
+. Open a shell prompt at a folder containing your AsciiDoc assembly file.
+
+. Load the assets to the local context:
 +
-```cmd
-$ podman cp $(podman run --quiet --detach quay.io/rhn_support_aireilly/asciidoctor-basic-style):/assets ./assets
-```
-3. Run the build:
+[source,terminal]
+----
+$ podman cp $(podman run --quiet --detach quay.io/redhat-docs/redhat-docs-template):/assets ./assets
+----
+
+. Run the build:
 +
-```cmd
-podman run --rm -it -v "$(pwd)":/docs:Z quay.io/rhn_support_aireilly/asciidoctor-basic-style main.adoc
-```
+[source,terminal]
+----
+$ podman run --rm -it -v "$(pwd)":/docs:Z quay.io/redhat-docs/redhat-docs-template main.adoc
+----
 
