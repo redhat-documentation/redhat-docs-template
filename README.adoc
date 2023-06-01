@@ -2,6 +2,9 @@
 
 A simple containerized Asciidoctor build that you can use build a clean and responsive Asciidoctor HTML website.
 
+.Example output
+image::site.png[width=800px]
+
 == Prerequisites
 
 * Install podman
