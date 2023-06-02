@@ -5,11 +5,13 @@ A simple containerized Asciidoctor build that you can use build a clean and resp
 .Example output
 image::site.png[width=600px]
 
+CSS based on https://github.com/uroesch/asciidoctor-readthedocs-theme
+
 == Prerequisites
 
 * Install Podman
 
-* Add the following line to the repo `.gitignore` and commit the change:
+* Add the following line to your source repo `.gitignore` and commit the change:
 +
 [source,text]
 ----
@@ -99,7 +101,7 @@ jobs:
           publish_dir: ./docs
 ----
 
-=== Adding a custom navbar logo in the GitHub workflow
+=== Adding a custom navbar logo to the GitHub action build
 
 . Add the custom SVG format logo file to your repo.
 
