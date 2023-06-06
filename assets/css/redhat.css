@@ -745,6 +745,18 @@ h6 {
     margin-top: -75px;
 }
 
+/* Fix the example block css */
+.exampleblock>.content>h1,
+.exampleblock>.content>h2,
+.exampleblock>.content>h3,
+.exampleblock>.content>h4,
+.exampleblock>.content>h5,
+.exampleblock>.content>h6 {
+    line-height: 1.4;
+    padding-top: unset;
+    margin-top: unset;
+}
+
 object,
 svg {
     display: inline-block;
@@ -2711,11 +2723,6 @@ h6>a.link:hover:after {
     margin-left: 0.5em
 }
 
-/*fix for outsize example boxes*/
-.discrete h6 {
-    padding-top: 10px;
-}
-
 @media only screen and (max-width: 767px) {
     #toc.toc2 {
         padding: 0;
@@ -2732,7 +2739,7 @@ h6>a.link:hover:after {
 
 }
 
-/*Top navigation*/
+/* Top navigation */
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -2759,7 +2766,7 @@ h6>a.link:hover:after {
     transform: translateY(0);
 }
 
-/*Copy code*/
+/* Copy code */
 div.content>pre>button {
     display: none;
 }*
@@ -2780,7 +2787,7 @@ div.listingblock>div>pre.rouge>button {
     border-radius: 4px;
 }
 
-/*GitHub link*/
+/* GitHub link */
 .github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out
 }
@@ -2812,7 +2819,7 @@ div.listingblock>div>pre.rouge>button {
     }
 }
 
-/*Active TOC item*/
+/* Active TOC item */
 .active {
     border-right: 3px solid #2e2e2e;
     font-weight: bold;
