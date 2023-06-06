@@ -2819,7 +2819,7 @@ div.listingblock>div>pre.rouge>button {
     }
 }
 
-/* Active TOC item */
+/* Active TOC item tweak */
 .active {
     border-right: 3px solid #2e2e2e;
     font-weight: bold;
