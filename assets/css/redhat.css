@@ -2711,6 +2711,11 @@ h6>a.link:hover:after {
     margin-left: 0.5em
 }
 
+/*fix for outsize example boxes*/
+.discrete h6 {
+    padding-top: 10px;
+}
+
 @media only screen and (max-width: 767px) {
     #toc.toc2 {
         padding: 0;
