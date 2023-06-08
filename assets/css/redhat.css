@@ -2652,10 +2652,10 @@ table.tableblock.grid-all td.tableblock {
     margin-left: 1.5em
 }
 
-.ulist:not(.checklist) ul li>p,
+/*.ulist:not(.checklist) ul li>p,
 .ulist:not(.checklist) ol li>p {
     padding-left: 0.5em
-}
+}*/
 
 .olist ol {
     margin-left: 2em
