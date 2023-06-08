@@ -20,11 +20,11 @@ assets
 
 == Running the build locally
 
-. Set the `toc-title` document attribute in your AsciiDoc assembly file:
+. Optional. Set the `toc-title` document attribute in your AsciiDoc assembly file:
 +
 [source,asciidoc]
 ----
-:toc-title: <document_title>
+:toc-title: <toc_title>
 ----
 
 . Open a shell prompt at the folder containing your assembly.
