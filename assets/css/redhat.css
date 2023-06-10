@@ -2411,6 +2411,9 @@ table.tableblock.grid-all td.tableblock {
     color: #465158
 }
 
+#toc.toc2 ul.sectlevel1 a {
+    border-right: 3px solid transparent;
+}
 #toc.toc2 ul.sectlevel1 a:hover,
 #toc.toc2 ul.sectlevel1 a:focus {
     color: #000;
