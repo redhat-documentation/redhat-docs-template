@@ -103,9 +103,9 @@ jobs:
           publish_dir: ./docs
 ----
 
-== Using the container build in a GitLab action
+== Using the container build in a GitLab pipeline
 
-Copy the following YAML to the `.gitlab-ci.yml` file in your repository root. Adjust as required. Commit and push the changes to deploy the site using GitHub pages.
+Copy the following YAML to the `.gitlab-ci.yml` file in your repository root. Adjust as required. Commit and push the changes to deploy the site using GitLab pages.
 
 Build assumes `main.adoc` is in the project root.
 
