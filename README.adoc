@@ -59,7 +59,9 @@ $ podman run --rm -it -v "$(pwd)":/docs:Z quay.io/redhat-docs/redhat-docs-templa
 
 == Using the container build in a GitHub action
 
-Copy the following YAML to the `.github/workflows/deploy-site.yml` file in your repository. Commit and push the changes to deploy the site using GitHib pages.
+Copy the following YAML to the `.github/workflows/deploy-site.yml` file in your repository. Adjust as required. Commit and push the changes to deploy the site with GitHub pages.
+
+Build assumes `main.adoc` is in the project root.
 
 .Example deploy-site.yml
 [source,yaml]
@@ -99,6 +101,39 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+----
+
+== Using the container build in a GitLab action
+
+Copy the following YAML to the `.gitlab-ci.yml` file in your repository root. Adjust as required. Commit and push the changes to deploy the site using GitHub pages.
+
+Build assumes `main.adoc` is in the project root.
+
+.Example .gitlab-ci.yml
+[source,yaml]
+----
+image:
+  name: quay.io/redhat-docs/redhat-docs-template
+  entrypoint: [""]
+
+pages:
+  stage: deploy
+  before_script:
+    - cp -r /assets assets
+  script:
+    - /build.sh main.adoc
+    - mkdir public
+    - cp -r /assets public/assets
+    - cp -r images/ public/images
+    - mv index.html public/
+  artifacts:
+    paths:
+    - public
+  only:
+    - main
+  tags:
+    - shared
+    - docker
 ----
 
 === Adding a custom navbar logo to the GitHub action build
