@@ -2,9 +2,9 @@
 
 set -e
 
-ASSEMBLY="$1"
+INPUT=$*
 
-asciidoctor "$ASSEMBLY" -o index.html \
+asciidoctor "$INPUT" -o index.html \
 -a stylesheet="assets/css/redhat.css" \
 -a logo="assets/img/logo.svg" \
 -a toc -a toc-placement=left \
@@ -18,4 +18,4 @@ asciidoctor "$ASSEMBLY" -o index.html \
 -a sectlinks 
 
 echo ""
-echo "Built $ASSEMBLY as ./index.html"
+echo "Built ./index.html"
