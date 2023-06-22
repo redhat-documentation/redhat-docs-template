@@ -2,9 +2,9 @@
 
 set -e
 
-INPUT=$*
+INPUT=("$@")
 
-asciidoctor "$INPUT" -o index.html \
+asciidoctor "${INPUT[@]}" -o index.html \
 -a stylesheet="assets/css/redhat.css" \
 -a logo="assets/img/logo.svg" \
 -a toc -a toc-placement=left \

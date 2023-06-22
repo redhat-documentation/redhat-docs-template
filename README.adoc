@@ -20,13 +20,6 @@ assets
 
 == Running the build locally
 
-. Optional. Set the `toc-title` document attribute in your AsciiDoc assembly file:
-+
-[source,asciidoc]
-----
-:toc-title: <toc_title>
-----
-
 . Open a shell prompt at the folder containing your assembly.
 
 . Pull the container image with Podman:
@@ -54,8 +47,18 @@ $ cp <path_to_logo> assets/img/logo.svg
 +
 [source,terminal]
 ----
-$ podman run --rm -it -v "$(pwd)":/docs:Z quay.io/redhat-docs/redhat-docs-template <asciidoc_assembly_file>
+$ podman run --rm -it -v "$(pwd)":/docs:Z quay.io/redhat-docs/redhat-docs-template <asciidoc_assembly_file> <optional_parameters>
 ----
++
+[NOTE]
+====
+Pass optional Asciidoctor format build parameters by using the `-a` switch. For example:
+
+[source,terminal]
+----
+$ podman run --rm -it -v "$(pwd)":/docs:Z quay.io/redhat-docs/redhat-docs-template main.adoc -a internal
+----
+====
 
 == Using the container build in a GitHub action
 
